@@ -7,12 +7,19 @@ const Tours = ({tours, removeTour}) => {
         <div className="title">
             <h2>Our Tours</h2>
             <div className="underline"></div>
-        </div>  
-            {tours.map((tour) => {
-            return (
-            <Tour key={tour.id} {...tour} removeTour={removeTour}></Tour>
-            );
+        </div>
+        <div className="container">
+            <div className="row">
+                
+                {tours.map((tour) => {
+                return (
+                    <div className="col-md-6">
+                        <Tour key={tour.id} {...tour} removeTour={removeTour}></Tour>
+                    </div>
+                    );
             })}
+            </div>
+        </div>
         </section>
     );
 };
